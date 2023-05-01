@@ -1,0 +1,28 @@
+@model List<Movie> 
+    <!-- EL MODELO QUE LE ESTAMOS PASANDO A LA VISTA ES DE UNA LISTA DE PELICULAS -->
+
+
+<div class="text-center">
+    <h1 class="display-4">Peliculas</h1>
+    <p>Top 10 mejores peliculas de Herramientas de Programacion</a>.</p>
+</div>
+
+<!-- LISTA ORDENADA Y QUE RECORRA NUESTRO MODELO -->
+<ol>
+    @foreach (var item in Model)
+    {
+        <li><a asp-action="Detail" asp-route-id="@item.Code">@item.Name</a></li>
+    }
+</ol>
+
+<a asp-action="Create">Nueva Peli</a>
+
+
+<!-- VAMOS A UTILIZAR EL LISTADO DE PELICULAS -->
+
+
+
+
+<!-- ACA LE ESTAMOS PASANDO EL MODELO, LO RECIBE LA VISTA, ATRAVES DELA ETIQUTA MODEL Y HACEMOS UN FOREACH PARA MOSTRARLO.-->
+
+<!--INDEX.CSHTML PERTENECIENTE AL CONTROLADOR DE MOVIE -->
