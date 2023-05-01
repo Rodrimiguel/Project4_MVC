@@ -1,5 +1,5 @@
 @model List<Movie> 
-    <!-- EL MODELO QUE LE ESTAMOS PASANDO A LA VISTA ES DE UNA LISTA DE PELICULAS -->
+    <!-- EL MODELO (DE MI PAGINA/ARMANDO UN MODELO DE MI PAGINA) QUE LE ESTAMOS PASANDO A LA VISTA ES DE UNA LISTA DE PELICULAS -->
 
 
 <div class="text-center">
@@ -12,17 +12,50 @@
     @foreach (var item in Model)
     {
         <li><a asp-action="Detail" asp-route-id="@item.Code">@item.Name</a></li>
+        // VA A REDIRECCIONANOS A LA PANTALLA DE DETAIL (DETALLE) DEBEMOS UN ENVIARL UN PARAMETRO PARA SABER QUE PELICULA TIENE QUE MOSTRAR.
+        // COMO SE VA A PROCESAR (CON)
+        // GENERAMOS UN ENLACE QUE NOS MUEVE LA ACCION DETAIL Y MANDA POR PARAMETRO EL CODIGO, QUE LUEGO EN LA ACCION CONTROLADR VAMOS A RECIBIR POR
+        // POR PARAMETRO Y CON NUESTRO SERVICIO VAMOS A TRAEL EL ELEMENTO Y SE LO MANDAMOS A LA VISTA ( Y EN LA VISTA SE UTILIZA DIRECTAMENTE)
     }
 </ol>
 
-<a asp-action="Create">Nueva Peli</a>
+<a asp-action="Create">Nueva Peli</a> <!-- BOTON QUE SEA NUEVA PELI / QUE ME LLEVE A DONDE ESTA EL FORMULARIO //// CONTROLADOR ES MOVIE Y LA ACCION ES CREATE --> 
+
+
 
 
 <!-- VAMOS A UTILIZAR EL LISTADO DE PELICULAS -->
 
-
-
-
 <!-- ACA LE ESTAMOS PASANDO EL MODELO, LO RECIBE LA VISTA, ATRAVES DELA ETIQUTA MODEL Y HACEMOS UN FOREACH PARA MOSTRARLO.-->
 
 <!--INDEX.CSHTML PERTENECIENTE AL CONTROLADOR DE MOVIE -->
+
+
+
+
+
+
+
+<!-- background -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon">
+    <title>Images</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: url("https://p4.wallpaperbetter.com/wallpaper/662/905/208/star-wars-movies-death-star-black-background-1920x1080-entertainment-movies-hd-art-wallpaper-preview.jpg");
+            color:grey;
+            padding: 10px;
+            background-position: auto;
+            background-size: cover ;
+            background-position: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h3>@@Background</h3>
+</body>
+</html>
