@@ -28,8 +28,8 @@ public static class MovieService{
        Movies.Add(obj);
     }
 
-    public static void Delete(string code){
-        var movieToDelete = Get(code);
+    public static void Delete(string code){// metodo para eliminar peliculas de la lista según su code.
+        var movieToDelete = Get (code); // llamando al metodo del servicio
 
         if (movieToDelete != null){
             Movies.Remove(movieToDelete);

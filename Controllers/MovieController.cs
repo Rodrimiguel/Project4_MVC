@@ -72,4 +72,31 @@ public class MovieController : Controller
 
         return RedirectToAction("Index"); // HACEMOS UN RETURN Y LO REDIRECCIONAMOS AL LISTADO DE PELICULAS. SI TODO SALIO BIEN ME VA A MOSTRAR LA PELICULA QUE ACABE DE CREAR.
     }
+
+
+    public IActionResult Delete()
+    {
+        return View();
+    }
+    [HttpPost] // 
+    public IActionResult Delete(string code){ 
+        if(!ModelState.IsValid){ 
+            return RedirectToAction("Create");
+        }
+
+        MovieService.Delete(code); 
+        return RedirectToAction("Index"); 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
