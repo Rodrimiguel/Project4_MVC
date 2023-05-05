@@ -5,19 +5,19 @@ using Project4.Services;
 
 namespace Project4.Controllers;
 
-public class HomeController : Controller
+public class HomeController : Controller // CONTROLLER CLASE PROPIA DE ASP.NET
 {
-    public HomeController()
+    public HomeController() // CONSTRUCTOR
     {
     }
 
      
-    public IActionResult Index()
+    public IActionResult Index() // ACCION POR DEFECTO INDEX (EN ESTE CASO DEVUELVE UNA VISTA) POR DEFECTO LLAMA A ESTA ACCION
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Privacy() // PRIVACY (ENTRA EN EL MISMO CONTROLADOR PERO ESTA LLAMANDO A ESTA ACCION)
     {
         return View();
     }
