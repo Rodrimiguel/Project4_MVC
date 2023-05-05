@@ -48,7 +48,7 @@ public class MovieController : Controller
 
     */
 
-    public IActionResult Detail(string id) // ACCION RECIBE PARAMETRO QUE SE LLAMA ID  (  <li><a asp-action="Detail" asp-route-id="@item.Code">@item.Name</a></li> index)
+    public IActionResult Detail(string id) // ACCION RECIBE PARAMETRO QUE SE LLAMA ID   PORQUE ASI SE LLAMA EN EL ASP-ROUTE-ID(  <li><a asp-action="Detail" asp-route-id="@item.Code">@item.Name</a></li> index)
     {
         var model = MovieService.Get(id); // vamos a traer esa pelicula. A traves del movieservice con metodo get que implementamos 
         //(id) y con ese codigo me devuelve el servicio con el codigo de la pelicula. ////// LLAMADA GET URL.
